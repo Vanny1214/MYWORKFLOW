@@ -13,9 +13,9 @@ jobs:
 
    # list of steps to perform task
    steps:
-   - name echo the date
-   run: echo "The current time and date in Github is $(date)"
+   - name: echo the date
+     run: echo "The current time and date in Github is $(date)"
    - name: echo information about the context
-  run: echo "head_ref - ${{ github.head_ref }}, owner - ${{ github.respository_owner }}"
+     run: echo "head_ref - ${{ github.head_ref }}, owner - ${{ github.respository_owner }}"
    - name: List runner name
-   run: echo "runner os - ${{ runner.os }}"
+     run: echo "runner os - ${{ runner.os }}"
