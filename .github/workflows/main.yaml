@@ -1,0 +1,21 @@
+name: My First WorkFlow
+
+# trigger
+on:
+- push
+
+# Jobs in the workflow
+jobs:
+ # job name,
+ my-first-workflow:
+   # OS that this job will be running on
+   runs-on: ubuntu-lastest
+
+   # list of steps to perform task
+   steps:
+   - name echo the date
+   run: echo "The current time and date in Github is $(date)"
+   - name: echo information about the context
+  run: echo "head_ref - ${{ github.head_ref }}, owner - ${{ github.respository_owner }}"
+   - name: List runner name
+   run: echo "runner os - ${{ runner.os }}"
